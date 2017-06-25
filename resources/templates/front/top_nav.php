@@ -21,6 +21,9 @@
                     <li>
                         <a href="Logout.php">Logout</a>
                     </li>
+                    <li>
+                        <a href="AddUser.php">Register</a>
+                    </li>
 
                 </ul>
             </div>
