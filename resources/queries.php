@@ -73,13 +73,25 @@ $sql4 = "select
         			from probs oo
                     where username = '$user_id'
                     and solveFor = 's') as conc,
-        
-            @countcontain:= (select count(c.block_id)
-        					from probs oo, blocks c
-        					where username = '$user_id'
-        					and c.block_id = b.block_id
-                            and find_in_set(varSolve, inpath) > 0) as 'countcontain',
-                            
+                    
+/*                            
+* This correlated subquery counts the number of distinct solution blocks
+* which contain the max count of input variables, all of which match the 
+* given inputs (for the given user)                           
+*
+*
+*      
+*          @countcontain:= (select count(c.block_id)
+*        					from probs oo, blocks c
+*        					where username = '$user_id'
+*        					and c.block_id = b.block_id
+*                            and find_in_set(varSolve, inpath) > 0) as 'countcontain',
+* 
+*                            
+* This correlated subquery counts the number of distinct solution blocks
+* which contain the max count of input variables, all of which match the 
+* given inputs (for the given user)                           
+*/                            
             @checkd:= (select count(distinct c.block_id)
         					from probs oo, blocks c
         					where username = '$user_id'
@@ -90,7 +102,7 @@ $sql4 = "select
         								and qq.block_id = c.block_id
         								and find_in_set(varSolve, inpath) > 0)) as 'checkd',
                                         
-        if(inpath_length = @countcontain and @checkd = 1, b.block_id, 0) as 'finalblock'
+        if(@checkd = 1, b.block_id, 0) as 'finalblock'
 /* test comment */        
         from
         	probs a, blocks b
