@@ -25,7 +25,7 @@ $sql3 = "select
 
 /*                            
 * The below correlated subquery counts the number of input variables
-* that are found in a given solution block
+* that are found in a given solution block, for the given user.
 */ 
         
             @countcontain:= (select count(c.block_id)
@@ -36,8 +36,8 @@ $sql3 = "select
 
 /*                            
 * The below correlated subquery counts the number of distinct solution blocks
-* which contain the max count of input variables, all of which match the 
-* given inputs (for the given user)                           
+* which contain the max count of input variables (all of which match the 
+* given inputs), for the given user.                           
 */                             
            
             @checkd:= (select count(distinct c.block_id)
@@ -49,6 +49,8 @@ $sql3 = "select
                         where username = '$user_id'
                         and qq.block_id = c.block_id
                         and find_in_set(varSolve, inpath) > 0)) as 'checkd',
+                        
+/* The following if statement ensures that solution block meets all of the solution criteria */                        
                                         
         if(inpath_length = @countcontain and @checkd = 1, b.block_id, 0) as 'finalblock'
         
@@ -96,7 +98,7 @@ $sql4 = "select
                     
 /*                            
 * The below correlated subquery counts the number of input variables
-* that are found in a given solution block
+* that are found in a given solution block, for the given user.
 */                        
       
           @countcontain:= (select count(c.block_id)
@@ -107,8 +109,8 @@ $sql4 = "select
  
 /*                            
 * The below correlated subquery counts the number of distinct solution blocks
-* which contain the max count of input variables, all of which match the 
-* given inputs (for the given user)                           
+* which contain the max count of input variables (all of which match the 
+* given inputs), for the given user.                           
 */                            
             @checkd:= (select count(distinct c.block_id)
         					from probs oo, blocks c
