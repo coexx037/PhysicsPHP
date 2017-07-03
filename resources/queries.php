@@ -36,8 +36,7 @@ $sql3 = "select
 
 /*                            
 * The below correlated subquery counts the number of distinct solution blocks
-* which contain the max count of input variables (all of which match the 
-* given inputs), for the given user.                           
+* which contain the max count of matching input variables, for the given user.                           
 */                             
            
             @checkd:= (select count(distinct c.block_id)
@@ -109,8 +108,7 @@ $sql4 = "select
  
 /*                            
 * The below correlated subquery counts the number of distinct solution blocks
-* which contain the max count of input variables (all of which match the 
-* given inputs), for the given user.                           
+* which contain the max count of matching input variables, for the given user.                           
 */                            
             @checkd:= (select count(distinct c.block_id)
         					from probs oo, blocks c
