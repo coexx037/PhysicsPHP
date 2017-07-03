@@ -91,7 +91,7 @@ $sql4 = "select
         								and find_in_set(varSolve, inpath) > 0)) as 'checkd',
                                         
         if(inpath_length = @countcontain and @checkd = 1, b.block_id, 0) as 'finalblock'
-        
+/* test comment */        
         from
         	probs a, blocks b
         where
