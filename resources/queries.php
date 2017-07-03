@@ -14,17 +14,31 @@ $sql3 = "select
         
         (select 
         *,
+        
+/* A dummy table is used to ensure the correct number of solutions steps are displayed in the correct order. */        
+        
             substring_index(substring_index(outpath, ',', dummy), ',', -1) as 'solveline'
             from dummy,
         
         (select
         *,
+
+/*                            
+* The below correlated subquery counts the number of input variables
+* that are found in a given solution block
+*/ 
+        
             @countcontain:= (select count(c.block_id)
                   from probs oo, blocks c
                   where username = '$user_id'
                   and c.block_id = b.block_id
                             and find_in_set(varSolve, inpath) > 0) as 'countcontain',
-                            
+
+/*                            
+* The below correlated subquery counts the number of distinct solution blocks
+* which contain the max count of input variables, all of which match the 
+* given inputs (for the given user)                           
+*/                             
            
             @checkd:= (select count(distinct c.block_id)
                   from probs oo, blocks c
@@ -62,6 +76,9 @@ $sql4 = "select
         username,
         varsolve,
         conc,
+        
+/* Values are converted based on the given units */        
+        
         if(find_in_set(varSolve, inpath) > 0, val/unitconversions.conversion, 0) as 'converted_value',
         if(solveFor = 's', conversion, null) as 'solve_conversion'
         
@@ -69,26 +86,27 @@ $sql4 = "select
         
         (select
         *,
+
+/* @conc defines the unique variable to be solved */
+        
         	@conc:= (select concat(direction, variable, solveFor)
         			from probs oo
                     where username = '$user_id'
                     and solveFor = 's') as conc,
                     
 /*                            
-* This correlated subquery counts the number of distinct solution blocks
-* which contain the max count of input variables, all of which match the 
-* given inputs (for the given user)                           
-*
-*
-*      
-*          @countcontain:= (select count(c.block_id)
-*        					from probs oo, blocks c
-*        					where username = '$user_id'
-*        					and c.block_id = b.block_id
-*                            and find_in_set(varSolve, inpath) > 0) as 'countcontain',
-* 
-*                            
-* This correlated subquery counts the number of distinct solution blocks
+* The below correlated subquery counts the number of input variables
+* that are found in a given solution block
+*/                        
+      
+          @countcontain:= (select count(c.block_id)
+        					from probs oo, blocks c
+        					where username = '$user_id'
+        					and c.block_id = b.block_id
+                            and find_in_set(varSolve, inpath) > 0) as 'countcontain',
+ 
+/*                            
+* The below correlated subquery counts the number of distinct solution blocks
 * which contain the max count of input variables, all of which match the 
 * given inputs (for the given user)                           
 */                            
@@ -101,9 +119,11 @@ $sql4 = "select
         								where username = '$user_id'
         								and qq.block_id = c.block_id
         								and find_in_set(varSolve, inpath) > 0)) as 'checkd',
+
+/* The following if statement ensures that solution block meets all of the solution criteria */ 
                                         
-        if(@checkd = 1, b.block_id, 0) as 'finalblock'
-/* test comment */        
+        if(inpath_length = @countcontain and @checkd = 1, b.block_id, 0) as 'finalblock'
+        
         from
         	probs a, blocks b
         where
