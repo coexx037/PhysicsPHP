@@ -6,7 +6,7 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 sol-xs-12 text-left">
+            <div class="col-lg-5 col-md-5 col-sm-5 sol-xs-12 text-left">
                 <div class="well">
                     <h1>Block on an inclined plane</h1>
                     <h3><?php display_message(); ?></h3>
