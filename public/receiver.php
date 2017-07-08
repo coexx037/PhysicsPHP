@@ -11,9 +11,10 @@ global $sql4;
 
 
 $sql1 = "delete from probs where username = '$user_id';";
-    
+
+//delete current problem set for the current user 
 mysqli_query($link, $sql1);
-    
+
 $sql2 = "insert into probs (direction, variable, val, solveFor, units, username, varSolve) values
             (?, ?, ?, ?, ?, ?, ?);";
 
@@ -25,7 +26,7 @@ $solveUnits = $_POST['solve_units'];
 $direction = $_POST['direction'];
 
 
-
+//insert new problem set for the given user 
 if($stmt = $link->prepare($sql2)){
     $stmt->bind_param('ssdssis', $direction, $key, $val, $solvefor, $unit, $user_id, $varsolve);
     
@@ -58,6 +59,7 @@ $stmt->close();
 
 /*************Solve steps**************************************/
 
+//query database and return the most complete solution steps for the given inputs
 if ($result = mysqli_query($link,$sql3)){
       echo '<table class="table table-bordered text-center">';
         //header
@@ -81,7 +83,7 @@ if ($result = mysqli_query($link,$sql3)){
     
 /********************Solution*************************************/
 
-
+//query database and return the most complete solution for the given inputs
 if ($result2 = mysqli_query($link,$sql4)){
   
       

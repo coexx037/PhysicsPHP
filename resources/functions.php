@@ -23,7 +23,7 @@ function display_message(){
     }
 }
 
-
+//validate user, insert user into database, define user in the session
 function addUserSubmit(){
     global $link;
     
@@ -71,6 +71,7 @@ function addUserSubmit(){
 }
 
 
+//validate and authenticate user, define user in the session
 function loginSubmit(){
     global $link;
     
