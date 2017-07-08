@@ -34,3 +34,7 @@
         <?php include(TEMPLATE_FRONT.DS."top_nav.php") ?>
         <!-- /.container -->
     </nav>
+    
+    <div class="container">
+
+    </div>
