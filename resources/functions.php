@@ -61,7 +61,6 @@ function addUserSubmit(){
                 if($result=mysqli_query($link, $sql)){
                     $last_id = last_id();
                     $_SESSION['user_id'] = $last_id;
-                    set_message('New User Added! userid = {$last_id}');
                 }else {echo "<br>Error: ".$sql."<br>".mysqli_error($link);}
             }
         }

@@ -1,6 +1,5 @@
 <?php require_once("../resources/functions.php"); ?>
 <?php include("../resources/session.php"); ?>
-<?php echo $_SESSION['user_id']; ?>
 
 <?php include(TEMPLATE_FRONT.DS."header.php") ?>
 
