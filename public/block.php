@@ -1,7 +1,10 @@
 <?php require_once("../resources/functions.php"); ?>
 <?php include("../resources/session.php"); ?>
 
-<?php include(TEMPLATE_FRONT.DS."header.php") ?>
+<div class="row">
+    <?php include(TEMPLATE_FRONT.DS."header.php") ?>
+</div>
+
 
     
     <div class="container">
