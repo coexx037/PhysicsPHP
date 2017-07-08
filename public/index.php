@@ -18,7 +18,7 @@ require_once("../resources/functions.php");
                 <h1>Welcome to Solve Physics!</h1>
                 <p>Solve mechanics problems</p>
                 <p>
-                <a class='btn btn-primary btn-large' href="/block">Go to Solver</a>
+                <a class='btn btn-primary btn-large' href="/block.php">Go to Solver</a>
                 </p>
             </div>
         </header>
