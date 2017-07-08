@@ -17,14 +17,6 @@ require_once("../resources/functions.php");
 
             <div class="col-md-9">
 
-                <div class="row carousel-holder">
-
-                    <div class="col-md-12">
-                        <?php include(TEMPLATE_FRONT.DS."slider.php") ?>
-                    </div>
-
-                </div>
-
                 <div class="row">
                     
 
