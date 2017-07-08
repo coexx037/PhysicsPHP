@@ -12,7 +12,6 @@
             <div class="col-lg-5 col-md-5 col-sm-5 sol-xs-12 text-left">
                 <div class="well">
                     <h1>Block on an inclined plane</h1>
-                    <h3><?php display_message(); ?></h3>
                 <form action="receiver.php" method="POST" class="ajax">
                     <table class="table">
                         <thead>
@@ -54,6 +53,9 @@
             <div class="col-lg-6 col-md-6 col-sm-6 sol-xs-12">
                 <canvas id="canvas" width="500" height="300" style="border:1px solid #000000;"></canvas> <br>
                 <div id="name_data"></div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 sol-xs-12">
+                <p>This is a paragraph for directions</p>
             </div>
 
     </div>
