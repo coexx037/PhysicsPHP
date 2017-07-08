@@ -12,17 +12,22 @@ require_once("../resources/functions.php");
 
         <div class="row">
 
-            <!-- side nav here -->
-            <?php include(TEMPLATE_FRONT.DS."side_nav.php") ?>
-
-            <div class="col-md-9">
-
-                <div class="row">
-                    
-
-                </div><!-- row ends here -->
-
+    <div class='container'>
+        <header class='jumbotron'>
+            <div clas="container">
+                <h1>Welcome to Solve Physics!</h1>
+                <p>Solve mechanics problems</p>
+                <p>
+                <a class='btn btn-primary btn-large' href="/block">Go to Solver</a>
+                </p>
             </div>
+        </header>
+    <div class='row text-center' style='display:flex; flex-wrap: wrap;'>
+
+    </div>
+
+
+</div>
 
         </div>
 
