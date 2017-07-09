@@ -54,9 +54,6 @@
                 <canvas id="canvas" width="500" height="300" style="border:1px solid #000000;"></canvas> <br>
                 <div id="name_data"></div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 sol-xs-12">
-                <p>This is a paragraph for directions</p>
-            </div>
 
     </div>
     </div>
