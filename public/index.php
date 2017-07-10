@@ -19,7 +19,7 @@ require_once("../resources/functions.php");
                 <div class="col-lg-6 col-md-6 col-sm-6 sol-xs-12">
                 <p>Directions:</p>
                 <ul>
-                    <li>Select the assumed direction of the block.</li>
+                    <li>Select the assumed direction of the block [(+) positive, (-) negative, (s) static].</li>
                     <li>Select the variable to solve for.</li>
                     <li>Select the units to solve for.</li>
                     <li>Enter input values.</li>
@@ -36,7 +36,7 @@ require_once("../resources/functions.php");
                       </tr>
                       <tr>
                           <td>g</td>
-                          <td>Gravity</td>
+                          <td>Gravity (9.8 m/s2)</td>
                       </tr>
                       <tr>
                           <td>Fnet</td>

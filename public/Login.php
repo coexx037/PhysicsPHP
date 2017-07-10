@@ -1,28 +1,41 @@
 <?php require_once("../resources/functions.php"); ?>
 <?php loginSubmit(); ?>
 
+<!DOCTYPE html>
 <html>
-<head>
-<title>CRUD Login</title>
-</head>
+    <head>
+        <title>Physics</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+    </head>
+    <body>
 
-<body>
-  <h2>CRUD Login</h2>
-  <h3><?php display_message(); ?></h3>
-  <form action="" method="post">
-  <fieldset>
-    <p>
-      <label>Username</label>
-      <input type="text" name="username" value="" maxlength="20" />
-    </p>
-    <p>
-      <label>Password</label>
-      <input type="password"  name="pwd" value="" maxlength="20" />
-    </p>
-    <p>
-      <input type="submit" value="Login" />
-    </p>
-  </fieldset>
-  </form>
-</body>
+<div class="container">
+
+      <header>
+            <h1 class="text-center">Login</h1>
+        <div class="col-sm-4 col-sm-offset-5"> 
+        
+            <form class="" action="" method="post">
+                
+                <div class="form-group"><label for="">
+                    Username<input type="text" name="username" class="form-control"></label>
+                </div>
+                 <div class="form-group"><label for="password">
+                    Password<input type="password" name="pwd" class="form-control"></label>
+                </div>
+
+                <div class="form-group">
+                  <input type="submit" name="submit" class="btn btn-primary" >
+                </div>
+            </form>
+        </div>  
+
+    </header>
+
+</div>
+
+
+    </body>
 </html>
