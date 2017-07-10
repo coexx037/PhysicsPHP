@@ -27,25 +27,25 @@ function display_message(){
 function addUserSubmit(){
     global $link;
     
-    if(!isset($_POST['username'], $_POST['pwd'])){
+    if(!isset($_POST['username'], $_POST['password'])){
         set_message('Please enter valid username and password');
     }
     
     elseif(strlen($_POST['username'])>20 || strlen($_POST['username'])<4){
         set_message('Incorrect length for Username');
     }
-    elseif(strlen($_POST['pwd'])>20 || strlen($_POST['pwd'])<4){
+    elseif(strlen($_POST['pwd'])>20 || strlen($_POST['password'])<4){
         set_message('Incorrect length for Username');
     }
     elseif(ctype_alnum($_POST['username']) != true){
         set_message('Username must be alpha numeric');
     }
-    elseif(ctype_alnum($_POST['pwd']) != true){
+    elseif(ctype_alnum($_POST['password']) != true){
         set_message('Password must be alpha numeric');
     }
     else {
         $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-        $pwd = filter_var($_POST['pwd'], FILTER_SANITIZE_STRING);
+        $pwd = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
     
     
     $pwd = sha1($pwd);
