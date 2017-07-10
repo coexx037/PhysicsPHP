@@ -1,29 +1,36 @@
 <?php require_once("../resources/functions.php"); ?>
 <?php addUserSubmit(); ?>
 
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Add New User</title>
-</head>
+    <head>
+        <title>Physics</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+    </head>
+    <body>
 
-<body>
-    <h2>Add New User</h2>
-    <form action="" method="post">
-      <fieldset>
-        <p>
-          <label>Username</label>
-          <input type="text" name="username" value="" maxlength="20" required/>
-          <i>(4-20 characters)</i>
-        </p>
-        <p>
-          <label>Password</label>
-          <input type="password" name="pwd" value="" maxlength="20" required/>
-          <i>(4-20 characters)</i>
-        </p>
-        <p> 
-          <input type="submit" value="Add User" />
-        </p>
-      </fieldset>
-    </form>
-</body>
-</html>
+<div class="container">
+
+      <header>
+            <h1 class="text-center">Signup</h1>
+        <div class="col-sm-4 col-sm-offset-5"> 
+        
+            <form class="" action="" method="post">
+                <div class="form-group"><label for="">
+                    <input type='text' name='username' placeholder='username' class="form-control">
+                </div>
+                <div class="form-group"><label for="">
+                    <input type='text' name='pwd' placeholder='password' class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <input type="submit" name="submit" class="btn btn-primary" >
+                </div>
+            </form>
+        </div>  
+
+    </header>
+
+</div>
