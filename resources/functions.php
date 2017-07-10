@@ -56,6 +56,7 @@ function addUserSubmit(){
         if($result=mysqli_query($link, $sql)) {
             if(mysqli_num_rows($result)>=1) {
                 set_message("Username already exists");
+                header("Location: AddUser.php");
             } else {
                 $sql = "insert into User_Dfn (username, pwd) values ('$username', '$pwd');";
                 if($result=mysqli_query($link, $sql)){
