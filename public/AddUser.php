@@ -22,7 +22,7 @@
                     <input type='text' name='username' placeholder='username' class="form-control">
                 </div>
                 <div class="form-group"><label for="">
-                    <input type='text' name='pwd' placeholder='password' class="form-control">
+                    <input type='password' name='pwd' placeholder='password' class="form-control">
                 </div>
 
                 <div class="form-group">
