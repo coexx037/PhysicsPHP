@@ -14,10 +14,10 @@
 <div class="container">
 
       <header>
-            <h1 class="text-center">Signup</h1>
             <div class="alert alert-success" role="alert">
-            <h6 class="text-center"><?php display_message(); ?></h6>
+            <h5 class="text-center"><?php display_message(); ?></h5>
             </div>
+            <h1 class="text-center">Signup</h1>
         <div class="col-sm-4 col-sm-offset-5"> 
         
             <form class="" action="" method="post">
