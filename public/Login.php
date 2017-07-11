@@ -16,7 +16,8 @@
       <header>
             <h1 class="text-center">Login</h1>
             <div class="alert alert-success" role="alert">
-            <h2><?php display_message(); ?></h2></div>
+            <h6 class="text-center"><?php display_message(); ?></h6>
+            </div>
         <div class="col-sm-4 col-sm-offset-5"> 
         
             <form class="" action="" method="post">
