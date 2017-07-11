@@ -26,7 +26,7 @@ $.each(options, function(key, value) {
     
     var gval = (key == "g") ? 9.81 : '';    
 
-	var textInput = '<td><input type="text" id='+key+' name="vall['+key+']" value="'+gval+'"></td>'
+	var textInput = '<td><input type="text" id='+key+' name="vall['+key+']" value='+gval+'></td>'
 	var unitsSelect = '<td><select id='+key+' name="units['+key+']"></select></td>'
 	
 	$('#solve_data').append('<option value='+key+'>'+key+'</option>')
