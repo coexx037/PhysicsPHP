@@ -16,7 +16,6 @@ define('DB_NAME', 'xxx'); /*Database Name*/
 define('DB_USER', 'xxx'); /*Database username*/
 define('DB_PWD', 'xxx');
 
-//mysql://b49eab265c3201:cc88e286@us-cdbr-iron-east-03.cleardb.net/heroku_3cfc984b56386d0?reconnect=true
 
 function connectDB() {
     $link = new mysqli(DB_HOST, DB_USER, DB_PWD, DB_NAME);
