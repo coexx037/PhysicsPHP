@@ -5,7 +5,7 @@
         <!-- Footer -->
         <footer>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 col-sm-12">
                     <p>2017 David Coe</p>
                 </div>
             </div>
