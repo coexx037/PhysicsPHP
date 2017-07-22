@@ -12,20 +12,17 @@
                 <a class="navbar-brand" href="index.php">Home</a>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <!--<div id="bs-example-navbar-collapse-1">-->
-                <ul class="nav navbar-nav">
                     
                     <?php
                     
                         if(!isset($_SESSION['user_id'])){
-                            echo "<li><a href='Login.php'>Login</a></li>";
-                            echo "<li><a href='AddUser.php'>Sign Up</a></li>";
+                            echo "<a href='Login.php'>Login</a>";
+                            echo "<a href='AddUser.php'>Sign Up</a>";
                         }else{
-                            echo "<li><a href='Logout.php'>Logout</a></li>";
+                            echo "<a href='Logout.php'>Logout</a>";
                         }
                     
                     ?>
-
-                </ul>
             </div>
             <!--</div>-->
             <!-- /.navbar-collapse -->
