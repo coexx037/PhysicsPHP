@@ -10,10 +10,10 @@
                     <?php
                     
                         if(!isset($_SESSION['user_id'])){
-                            echo "<a class='navbar-brand' href='Login.php'>Login</a>";
-                            echo "<a class='navbar-brand' href='AddUser.php'>Sign Up</a>";
+                            echo "<a class='navbar-right' href='Login.php'>Login</a>";
+                            echo "<a class='navbar-right' href='AddUser.php'>Sign Up</a>";
                         }else{
-                            echo "<a class='navbar-brand' href='Logout.php'>Logout</a>";
+                            echo "<a class='navbar-right' href='Logout.php'>Logout</a>";
                         }
                     
                     ?>
