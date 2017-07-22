@@ -16,10 +16,10 @@
                     <?php
                     
                         if(!isset($_SESSION['user_id'])){
-                            echo "<a href='Login.php'>Login</a>";
-                            echo "<a href='AddUser.php'>Sign Up</a>";
+                            echo "<a class='navbar-brand' href='Login.php'>Login</a>";
+                            echo "<a class='navbar-brand' href='AddUser.php'>Sign Up</a>";
                         }else{
-                            echo "<a href='Logout.php'>Logout</a>";
+                            echo "<a class='navbar-brand' href='Logout.php'>Logout</a>";
                         }
                     
                     ?>
