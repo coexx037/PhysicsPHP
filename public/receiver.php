@@ -61,7 +61,9 @@ $stmt->close();
 
 //query database and return the most complete solution steps for the given inputs
 if ($result = mysqli_query($link,$sql3)){
-  if($result.length > 0){
+  if($result->num_rows === 0){
+    echo '<p>Tough luck!</p>';
+  }else{
       echo '<table class="table table-bordered text-center">';
         //header
         echo "<tr>";
@@ -79,11 +81,10 @@ if ($result = mysqli_query($link,$sql3)){
           echo "<td>{$row[2]}</td>";
         echo "</tr>";
       } 
-      echo "</table>";   
-    }else {
-      echo "<p>Tough luck!<p>";
-    }
+      echo "</table>";  
   }
+}
+  
     
 /********************Solution*************************************/
 
