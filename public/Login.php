@@ -13,10 +13,13 @@
 
 <div class="container">
 
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center">
+            <div class="alert alert-sucess" role="alert"><?php display_message(); ?>></div>
+        </div>
+    </div>
+
       <header>
-            <div class="alert alert-success" role="alert">
-            <h5 class="text-center"><?php display_message(); ?></h5>
-            </div>
             <h1 class="text-center">Login</h1>
         <div class="col-sm-4 col-sm-offset-5"> 
         
