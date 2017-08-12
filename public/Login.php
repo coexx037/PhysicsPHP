@@ -21,7 +21,7 @@
 
       <header>
             <h1 class="text-center">Login</h1>
-        <div class="col-sm-4 col-sm-offset-5"> 
+        <div class="text-center"> 
         
             <form class="" action="" method="post">
                 
