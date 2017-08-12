@@ -9,9 +9,9 @@ var units = {
 }
 
 var options = {
+    a: units.a,
 	g: units.a,
 	Fnet: units.f,
-	a: units.a,
 	theta: units.theta,
 	m1: units.m,
 	m2: units.m,

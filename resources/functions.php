@@ -37,12 +37,6 @@ function addUserSubmit(){
     elseif(strlen($_POST['pwd'])>20 || strlen($_POST['pwd'])<4){
         set_message('Incorrect length for Username');
     }
-    elseif(ctype_alnum($_POST['username']) != true){
-        set_message('Username must be alpha numeric');
-    }
-    elseif(ctype_alnum($_POST['pwd']) != true){
-        set_message('Password must be alpha numeric');
-    }
     else {
         $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
         $pwd = filter_var($_POST['pwd'], FILTER_SANITIZE_STRING);
@@ -90,12 +84,6 @@ function loginSubmit(){
     }
     elseif(strlen($_POST['pwd'])>20 || strlen($_POST['pwd'])<4){
         set_message('Incorrect length for Username');
-    }
-    elseif(ctype_alnum($_POST['username']) != true){
-        set_message('Username must be alpha numeric');
-    }
-    elseif(ctype_alnum($_POST['pwd']) != true){
-        set_message('Password must be alpha numeric');
     }
     else {
         $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
