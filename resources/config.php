@@ -11,10 +11,10 @@ define("DS", DIRECTORY_SEPARATOR);
 define("TEMPLATE_FRONT", __DIR__.DS."templates/front");
 define("TEMPLATE_BACK", __DIR__.DS."templates/back");
 
-define('DB_HOST', 'us-cdbr-iron-east-03.cleardb.net'); /*Database server*/
-define('DB_NAME', 'heroku_3cfc984b56386d0'); /*Database Name*/
-define('DB_USER', 'b49eab265c3201'); /*Database username*/
-define('DB_PWD', 'cc88e286');
+define('DB_HOST', 'xxx'); /*Database server*/
+define('DB_NAME', 'xxx'); /*Database Name*/
+define('DB_USER', 'xxx'); /*Database username*/
+define('DB_PWD', 'xxx');
 
 //mysql://b49eab265c3201:cc88e286@us-cdbr-iron-east-03.cleardb.net/heroku_3cfc984b56386d0?reconnect=true
 
