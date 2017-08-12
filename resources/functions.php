@@ -89,10 +89,8 @@ function loginSubmit(){
             }
         }
         
-        if($username == false);
-        {
+        if($username == false){
             set_message('Login Failed');
-            
         }
         
     } catch(Exception $e) {set_message("Unable to process request");}
