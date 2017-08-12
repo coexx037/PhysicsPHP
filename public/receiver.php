@@ -62,7 +62,7 @@ $stmt->close();
 //query database and return the most complete solution steps for the given inputs
 if ($result = mysqli_query($link,$sql3)){
   if($result->num_rows === 0){
-    echo '<p>Tough luck!</p>';
+    echo '<div class="alert alert-danger" role="alert">A solution does not exist for the given inputs. Please assign more input values. </div>';
   }else{
       echo '<table class="table table-bordered text-center">';
         //header
