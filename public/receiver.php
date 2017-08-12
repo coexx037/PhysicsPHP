@@ -90,8 +90,9 @@ if ($result = mysqli_query($link,$sql3)){
 
 //query database and return the most complete solution for the given inputs
 if ($result2 = mysqli_query($link,$sql4)){
-  
-      
+  if($result2->num_rows === 0){
+    return;
+  }else{
       echo '<table class="table table-bordered text-center">';
         //header
         echo "<tr>";
@@ -130,7 +131,7 @@ if ($result2 = mysqli_query($link,$sql4)){
           echo "<td>{$answer['solveUnits']}</td>";
         echo "</tr>";
       echo "</table>";
-      
+  }
     
 }
     mysqli_close($link);
