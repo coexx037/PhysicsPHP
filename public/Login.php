@@ -15,7 +15,7 @@
 
     <div class="row">
         <div class="col-md-4 col-md-offset-4 text-center">
-            <div class="alert alert-sucess" role="alert"><?php display_message(); ?>></div>
+            <div class="alert alert-success" role="alert"><?php display_message(); ?></div>
         </div>
     </div>
 
