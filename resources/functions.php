@@ -31,12 +31,6 @@ function addUserSubmit(){
         set_message('Please enter valid username and password');
     }
     
-    elseif(strlen($_POST['username'])>20 || strlen($_POST['username'])<4){
-        set_message('Incorrect length for Username');
-    }
-    elseif(strlen($_POST['pwd'])>20 || strlen($_POST['pwd'])<4){
-        set_message('Incorrect length for Username');
-    }
     else {
         $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
         $pwd = filter_var($_POST['pwd'], FILTER_SANITIZE_STRING);
@@ -79,12 +73,6 @@ function loginSubmit(){
         set_message('Please enter valid username and password');
     }
     
-    elseif(strlen($_POST['username'])>20 || strlen($_POST['username'])<4){
-        set_message('Incorrect length for Username');
-    }
-    elseif(strlen($_POST['pwd'])>20 || strlen($_POST['pwd'])<4){
-        set_message('Incorrect length for Username');
-    }
     else {
         $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
         $pwd = filter_var($_POST['pwd'], FILTER_SANITIZE_STRING);
